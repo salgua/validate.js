@@ -36,7 +36,11 @@ validate.js is a lightweight JavaScript form validation library inspired by Code
         display: 'min length',
         rules: 'min_length[8]'
     }], function(errors) {
-        if (errors.length > 0) {
+        var count = 0;
+        for (var x in errors) {
+            count++;
+        }
+        if (count > 0) {
             // Show the errors
         }
     });
